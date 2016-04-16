@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finder - Never Lose Hope</title>
+    <link rel="stylesheet" type="text/css" href="interface/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="interface/css/default.css" />
+  </head>
+  <body>
+    <header id="app-header">
+      <div id="small-logo"></div>
+    </header>
+    <header id="lost-found-header"></header>
+    <div id="search-location-popup">
+      <div id="search-location-popup-header">
+        <div class="popup-close">
+          <a href="#"><img src="interface/images/close.png" alt="" /></a>
+        </div>
+      </div>
+      <div id="search-location-popup-body">
+        <form action="" id="search-for-location">
+          <input type="text" name="query" placeholder="התחל לרשום..." />
+          <button type="submit">שלח</button>
+        </form>
+      </div>
+    </div>
+    <section id="loading">
+      <div id="logo">
+        <img src="interface/images/logo.png" alt="" />
+      </div>
+      <div class="progress">
+        <div class="progress-inner" style="width: 0%"></div>
+      </div>
+    </section>
+    <section id="home">
+      <div id="map"></div>
+      <div class="popup" id="popup-lost">
+        <div class="popup-header">
+          <div class="popup-close" id="popup-close">
+            <a href="#"><img src="interface/images/close.png" alt="" /></a>
+          </div>
+          <div class="popup-profile">
+            <img src="https://scontent-fra3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1975160_10152237460952778_288187067_n.jpg?oh=079455e0cd40330d09b827374e264a86&oe=5781D9FD" id="data-avatar" alt="" />
+            <h2 id="data-fullname">Ofir Shuv</h2>
+            <div class="popup-profile-date">
+              <span id="data-date">02.12.2016<span> <img src="interface/images/calander.png" style="margin-left: 10px" alt="" />
+              <span id="data-time">15:28</span> <img src="interface/images/clock.png" alt="" />
+            </div>
+          </div>
+          <div class="popup-camera">
+            <a href="#"><img src="interface/images/camera.png" alt="" /></a>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="popup-label popup-label-lost">
+          איבדתי!
+        </div>
+        <div class="popup-description">
+          <span id="data-description">״משקפי שמש ממותג ראיי-באן בצבע זהב עם פס אדום בצד״</span>
+        </div>
+        <div class="popup-status-lost">
+          <span id="data-prize">500 ש״ח למוצא הישר</span>
+        </div>
+      </div>
+    </section>
+    <section id="login">
+      Login
+    </section>
+    <section id="lost">
+      <div class="inner-block">
+        <h1>מה איבדת?</h1>
+        <div class="categories">
+          <div class="category" data-categoryId="5710ced7e3c45e13005f6260">
+            <div class="icons icons-ARM"></div>
+            צב״א
+          </div>
+          <div class="category" data-categoryId="5711f34173795112001c5b95">
+            <div class="icons icons-ID"></div>
+            תעודת זהות
+          </div>
+          <div class="category" data-categoryId="5711f3416151571200ea4d9c">
+            <div class="icons icons-JWL"></div>
+            תכשיט
+          </div>
+          <div class="clear"></div>
+          <div class="category" data-categoryId="5711f3426151571200ea4d9d">
+            <div class="icons icons-SGL"></div>
+            אביזרי לבוש
+          </div>
+          <div class="category" data-categoryId="5711f3426151571200ea4d9e">
+            <div class="icons icons-WLT"></div>
+            חפצים אישיים
+          </div>
+        </div>
+        <h1>איפה איבדת?</h1>
+        <div class="row">
+          <div class="half">
+            <a href="#" data-storage-key="location" data-storage-val="current">
+            <strong>במיקום הנוכחי!</strong>
+            <span>מצאתי כאן!</span>
+            </a>
+          </div>
+          <div class="half">
+            <a href="#" data-storage-key="location" data-storage-val="other">
+            <strong>איבדתי במקום אחר!</strong>
+            <span>בחירת כתובת!</span>
+            </a>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div id="upload" class="empty-block">
+          <img src="interface/images/camera.png" alt="" />
+          <strong>העלה תמונה</strong>
+          <span>(לא חובה)</span>
+        </div>
+        <textarea id="description" class="upload-item-textarea">תאר בכמה מילים את הפריט...</textarea>
+        <div id="prize" class="empty-block">
+          <strong>פרס למוצא הישר</strong>
+          <span>(לא חובה)</span>
+        </div>
+        <textarea id="prize-description" class="upload-item-textarea">תאר בכמה מילים את הפרס...(לדוגמה: ארגז בירה)</textarea>
+      </div>
+    </section>
+    <section id="found">
+      <div class="inner-block">
+        <h1>מה מצאת?</h1>
+        <div class="categories">
+          <div class="category" data-categoryId="5710ced7e3c45e13005f6260">
+            <div class="icons icons-ARM"></div>
+            צב״א
+          </div>
+          <div class="category" data-categoryId="5711f34173795112001c5b95">
+            <div class="icons icons-ID"></div>
+            תעודת זהות
+          </div>
+          <div class="category" data-categoryId="5711f3416151571200ea4d9c">
+            <div class="icons icons-JWL"></div>
+            תכשיט
+          </div>
+          <div class="clear"></div>
+          <div class="category" data-categoryId="5711f3426151571200ea4d9d">
+            <div class="icons icons-SGL"></div>
+            אביזרי לבוש
+          </div>
+          <div class="category" data-categoryId="5711f3426151571200ea4d9e">
+            <div class="icons icons-WLT"></div>
+            חפצים אישיים
+          </div>
+        </div>
+        <div class="clear"></div>
+        <h1>איפה מצאת?</h1>
+        <div class="row">
+          <div class="half">
+            <a href="#" data-storage-key="location" data-storage-val="current">
+            <strong>במיקום הנוכחי!</strong>
+            <span>מצאתי כאן!</span>
+            </a>
+          </div>
+          <div class="half">
+            <a href="#" data-storage-key="location" data-storage-val="other">
+            <strong>מצאתי במקום אחר!</strong>
+            <span>בחירת כתובת!</span>
+            </a>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div id="upload" class="empty-block">
+          <img src="interface/images/camera.png" alt="" />
+          <strong>העלה תמונה</strong>
+          <span>(לא חובה)</span>
+        </div>
+        <textarea id="description" class="upload-item-textarea">תאר בכמה מילים את הפריט...</textarea>
+      </div>
+    </section>
+    <footer id="lost-found-footer">
+      <button type="submit">הוסף למפה</button>
+    </footer>
+    <footer id="app-footer">
+      <div class="half">
+        <a href="#!/lost">
+          <div class="icon"><img src="interface/images/help.png" alt="" /></div>
+          <strong>איבדתי משהו!</strong>
+          <span>זקוז לעזרה!</span>
+        </a>
+      </div>
+      <div class="half">
+        <a href="#!/found">
+          <div class="icon"><img src="interface/images/heart.png" alt="" /></div>
+          <strong>מצאתי משהו!</strong>
+          <span>רוצה לעזור!</span>
+        </a>
+      </div>
+    </footer>
+    <footer class="locations-footer" id="locations-lost-footer">
+      <div class="row">
+        <div class="half">
+          <a href="" class="facebook-message">
+          <strong>זה אצלי!</strong>
+          <span>שליחת הודעת צ׳אט!</span>
+          </a>
+        </div>
+        <div class="half">
+          <a href="#">
+          <strong>שיתוף!</strong>
+          <span>תראה לנו שאכפת לך!</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <footer class="locations-footer" id="locations-found-footer">
+      <div class="row">
+        <div class="half">
+          <a href="" class="facebook-message">
+          <strong>זה שלי!</strong>
+          <span>שליחת הודעת צ׳אט!</span>
+          </a>
+        </div>
+        <div class="half">
+          <a href="">
+          <strong>שיתוף!</strong>
+          <span>תראה לנו שאכפת לך!</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&language=iw"></script>
+    <script src="interface/javascript/foxfort.js"></script>
+    <script src="interface/javascript/application.js"></script>
+    <script>
+      //-------------------
+      // debuger.
+      //-------------------
+      console.log( JSON.stringify( foxfort.debuger(true), null, "\t" ) );
+    </script>
+  </body>
+</html>
